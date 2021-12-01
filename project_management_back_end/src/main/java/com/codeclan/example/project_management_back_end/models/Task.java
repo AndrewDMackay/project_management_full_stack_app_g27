@@ -106,9 +106,4 @@ public class Task implements Serializable {
     public void setBoard(Board board) {
         this.board = board;
     }
-
-
-    //    Key functions..
-
-
 }
