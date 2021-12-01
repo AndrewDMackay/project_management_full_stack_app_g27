@@ -68,7 +68,7 @@ public class Board implements Serializable {
         this.tasks = tasks;
     }
 
-    //    Add, remove, etc..
+    //    Key functions..
 
     public void addTask(Task task) {
         this.tasks.add(task);
