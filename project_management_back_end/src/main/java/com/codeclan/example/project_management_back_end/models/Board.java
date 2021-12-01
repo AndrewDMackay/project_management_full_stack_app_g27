@@ -1,14 +1,27 @@
 package com.codeclan.example.project_management_back_end.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Board {
+@Entity
+@Table(name = "boards")
+public class Board implements Serializable{
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long  id;
+
+    @Column(name = "name")
     private String name;
+
+    @Column(name = "comment")
     private String comment;
 
+    @JsonIgnoreProperties(value = "board")
+    @OneToMany(mappedBy = "board", fetch = FetchType.LAZY)
     private List<Task> tasks;
 
     public Board(String name, String comment) {
@@ -20,6 +33,8 @@ public class Board {
     public Board(){
 
     }
+
+    //    Getters, and setters..
 
     public Long getId() {
         return id;
@@ -53,7 +68,13 @@ public class Board {
         this.tasks = tasks;
     }
 
+    //    Add, remove, etc..
+
     public void addTask(Task task) {
         this.tasks.add(task);
+    }
+
+    public void removeTask(Task task) {
+        this.tasks.remove(task);
     }
 }
