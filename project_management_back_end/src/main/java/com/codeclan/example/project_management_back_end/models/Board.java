@@ -20,6 +20,9 @@ public class Board implements Serializable {
     @Column(name = "comment")
     private String comment;
 
+    @Column(name = "active")
+    private Boolean active;
+
     @JsonIgnoreProperties(value = "board")
     @OneToMany(mappedBy = "board", fetch = FetchType.LAZY)
     private List<Task> tasks;
@@ -28,6 +31,7 @@ public class Board implements Serializable {
         this.name = name;
         this.comment = comment;
         this.tasks = new ArrayList<Task>();
+        this.active = true;
     }
 
     public Board(){
@@ -58,6 +62,14 @@ public class Board implements Serializable {
 
     public void setComment(String comment) {
         this.comment = comment;
+    }
+
+    public Boolean getActive() {
+        return active;
+    }
+
+    public void setActive(Boolean active) {
+        this.active = active;
     }
 
     public List<Task> getTasks() {

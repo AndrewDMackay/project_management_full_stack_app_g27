@@ -36,12 +36,12 @@ public class Task implements Serializable {
     @JoinColumn(name = "board_id", nullable = false)
     private Board board;
 
-    public Task(LocalDate date, LocalTime time, String comment, TaskType priority, Boolean completed, Board board) {
+    public Task(LocalDate date, LocalTime time, String comment, TaskType priority, Board board) {
         this.date = date;
         this.time = time;
         this.comment = comment;
         this.priority = priority;
-        this.completed = completed;
+        this.completed = false;
         this.board = board;
     }
 
