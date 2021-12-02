@@ -38,7 +38,7 @@ class ProjectManagementBackEndApplicationTests {
 		boardRepository.save(testBoard1);
 
 		LocalDate dateTask1 = LocalDate.of(2021, 12, 1);
-		LocalTime timeTask1 = LocalTime.of(12, 00);
+		LocalTime timeTask1 = LocalTime.of(12, 0);
 
 		Task testTask1 = new Task(dateTask1, timeTask1, "Test task comment 1..", TaskType.LOW, testBoard1);
 		taskRepository.save(testTask1);

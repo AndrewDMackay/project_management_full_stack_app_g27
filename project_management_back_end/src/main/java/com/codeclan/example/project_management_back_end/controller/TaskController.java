@@ -2,7 +2,6 @@ package com.codeclan.example.project_management_back_end.controller;
 
 import com.codeclan.example.project_management_back_end.models.Task;
 import com.codeclan.example.project_management_back_end.repositories.TaskRepository;
-import org.apache.coyote.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
