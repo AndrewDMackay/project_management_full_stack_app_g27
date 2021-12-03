@@ -3,7 +3,8 @@ import React, { useState } from 'react'
 
 const MainContainer = () => {
     const [boards, setBoards] = useState(null)
-}
+    const [selectedBoard, setSelectedBoard] = useState(null)
+
 
 
     return (
