@@ -18,9 +18,11 @@ function App() {
             <script src="https://kit.fontawesome.com/a68a14eaee.js" crossorigin="anonymous"></script>        
           </head>
           <div>
-            <Route exact path="/" component={MainContainer} />
-            <Route exact path="/boards" component={BoardContainer} />
-            <Route exact path="/tasks" component={TaskContainer} />
+            <Switch>
+              <Route exact path="/" component={MainContainer} />
+              <Route exact path="/boards" component={BoardContainer} />
+              <Route exact path="/tasks" component={TaskContainer} />
+            </Switch>
           </div>
         </div>
       </>

@@ -1,10 +1,21 @@
 import React, { useState } from 'react'
-
+import {Route, Switch} from 'react-router-dom';
 
 const MainContainer = () => {
-    const [boards, setBoards] = useState(null)
-    const [selectedBoard, setSelectedBoard] = useState(null)
+    // const [boards, setBoards] = useState(null)
+    // const [selectedBoard, setSelectedBoard] = useState(null)
 
+
+    // const onBoardClick = function (board) {
+    //     fetch()
+    //         .then(res => res.json())
+    //         .then(data => setSelectedBoard(data))
+    // }
+
+
+    // const onHomeClick = function () {
+    //     setSelectedBoard(null);
+    // }
 
 
     return (
