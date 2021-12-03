@@ -1,7 +1,11 @@
 import react from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import {BrowserRouter as Router, Route, Routes, Switch} from 'react-router-dom';
 
-import './App.css';
+import MainContainer from './containers/MainContainer';
+import BoardContainer from './containers/BoardContainer';
+import TaskContainer from './containers/TaskContainer';
+
+import './stylesheets/App.css';
 
 
 function App() {
@@ -18,11 +22,13 @@ function App() {
             <script src="https://kit.fontawesome.com/a68a14eaee.js" crossorigin="anonymous"></script>        
           </head>
           <div>
-            <Switch>
+            {/* <Switch> */}
+            <Routes>
               <Route exact path="/" component={MainContainer} />
               <Route exact path="/boards" component={BoardContainer} />
               <Route exact path="/tasks" component={TaskContainer} />
-            </Switch>
+            </Routes>
+            {/* </Switch> */}
           </div>
         </div>
       </>

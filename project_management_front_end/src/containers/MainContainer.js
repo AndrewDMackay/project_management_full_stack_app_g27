@@ -1,11 +1,14 @@
 import React, { useState } from 'react'
-import {Route, Switch} from 'react-router-dom';
+import {Route, Routes, Switch} from 'react-router-dom';
+
+import NavBar from '../components/nav/NavBar';
 
 const MainContainer = () => {
 
     return (
         <>
-        <Switch>
+        {/* <Switch> */}
+        <Routes>
             <div className="main-nav-bar-container">
                 <NavBar/>
             </div>
@@ -14,7 +17,8 @@ const MainContainer = () => {
                 <div className="main-logo-icon"></div>
                 <div className="main-small-logo-icon"></div>
             </div>
-        </Switch>
+        </Routes>
+        {/* </Switch> */}
         </>
     )
 

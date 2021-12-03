@@ -1,15 +1,21 @@
-import React, { useState } from 'react'
-import {Route, Switch} from 'react-router-dom';
+import React, {useState, useEffect} from 'react';
+import {Route, Routes, Switch} from 'react-router-dom';
+
+import TaskForm from '../components/tasks/TaskForm';
+import TaskList from '../components/tasks/TaskList';
+import TaskDetail from '../components/tasks/TaskDetail';
+
 
 const TaskContainer = () => {
 
     const [tasks, setTasks] = useState([]);
+    const [boards, setBoards] = useState([]);
 
     const requestAll = function(){
         const request = new Request();
         const taskPromise = request.get('/api/tasks')
     
-        Promise.all([askPromise, ])
+        Promise.all([taskPromise, ])
         .then((data) => {
             setTasks(data[1]);
         })
@@ -56,35 +62,36 @@ const TaskContainer = () => {
     return(
         
         <>
-        <Switch>
+        {/* <Switch> */}
+        <Routes>
             <Route exact path = '/tasks/new' render={() =>{
-            return <TaskForm boards={boards} onCreate={handlePost}/>
+            return <TaskForm boards={boards} onCreate={handlePostTask}/>
             }}/> 
 
             <Route exact path="/tasks/:id/edit" render={(props) =>{
             const id = props.match.params.id;
             const task = findTaskById(id);
-            return <TaskForm task={task} boards={boards} onUpdate={handleUpdate}/>
+            return <TaskForm task={task} boards={boards} onUpdate={handleUpdateTask}/>
             }}/>  
 
             <Route exact path="/tasks/:id" render={(props) =>{
             const id = props.match.params.id;
             const task = findTaskById(id);
             return <TaskDetail task={task}
-            onDelete={handleDelete}
-            onUpdate={handleUpdate} 
-            raids={raids} 
+            onDelete={handleDeleteTask}
+            onUpdate={handleUpdateTask} 
             />
             }}/>
 
             <Route render={() => {
             return <TaskList tasks={tasks}/>
             }} />
-        </Switch>
+        </Routes>
+        {/* </Switch> */}
         </>
     )
   }
 
 
-export default BoardContainer;
+export default TaskContainer;
 

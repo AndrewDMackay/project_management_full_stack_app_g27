@@ -1,5 +1,9 @@
-import React, { useState } from 'react'
-import {Route, Switch} from 'react-router-dom';
+import React, {useState, useEffect} from 'react';
+import {Route, Routes, Switch} from 'react-router-dom';
+
+import BoardForm from '../components/boards/BoardForm';  
+import BoardList from '../components/boards/BoardList';  
+import BoardDetail from '../components/boards/BoardDetail';  
 
 const BoardContainer = () => {
 
@@ -89,31 +93,32 @@ const BoardContainer = () => {
     return(
         
         <>
-        <Switch>
+        {/* <Switch> */}
+        <Routes>
             <Route exact path = '/boards/new' render={() =>{
-            return <BoardForm boards={boards} onCreate={handlePost}/>
+            return <BoardForm boards={boards} onCreate={handlePostBoard}/>
             }}/> 
 
             <Route exact path="/boards/:id/edit" render={(props) =>{
             const id = props.match.params.id;
             const board = findBoardById(id);
-            return <BoardForm board={board} boards={boards} onUpdate={handleUpdate}/>
+            return <BoardForm board={board} boards={boards} onUpdate={handleUpdateBoard}/>
             }}/>  
 
             <Route exact path="/boards/:id" render={(props) =>{
             const id = props.match.params.id;
             const board = findBoardById(id);
             return <BoardDetail board={board}
-            onDelete={handleDelete}
-            onUpdate={handleUpdate} 
-            raids={raids} 
+            onDelete={handleDeleteBoard}
+            onUpdate={handleUpdateBoard} 
             />
             }}/>
 
             <Route render={() => {
             return <BoardList boards={boards}/>
             }} />
-        </Switch>
+        </Routes>
+        {/* </Switch> */}
         </>
     )
   }
