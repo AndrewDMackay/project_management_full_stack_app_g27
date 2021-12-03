@@ -22,19 +22,3 @@ const MainContainer = () => {
 
 export default MainContainer;
 
-
-    // May not be needed with a Java back-end.. 
-
-    // const [boards, setBoards] = useState(null)
-    // const [selectedBoard, setSelectedBoard] = useState(null)
-
-    // const onBoardClick = function (board) {
-    //     fetch()
-    //         .then(res => res.json())
-    //         .then(data => setSelectedBoard(data))
-    // }
-
-    // const onHomeClick = function () {
-    //     setSelectedBoard(null);
-    // }
-

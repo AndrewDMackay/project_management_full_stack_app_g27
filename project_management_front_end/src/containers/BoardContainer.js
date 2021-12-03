@@ -93,11 +93,13 @@ const BoardContainer = () => {
             <Route exact path = '/tasks/new' render={() =>{
             return <TaskForm boards={boards} onCreate={handlePost}/>
             }}/> 
+
             <Route exact path="/tasks/:id/edit" render={(props) =>{
             const id = props.match.params.id;
             const task = findTaskById(id);
             return <TaskForm task={task} boards={boards} onUpdate={handleUpdate}/>
             }}/>  
+
             <Route exact path="/tasks/:id" render={(props) =>{
             const id = props.match.params.id;
             const task = findTaskById(id);
@@ -107,6 +109,7 @@ const BoardContainer = () => {
             raids={raids} 
             />
             }}/>
+
             <Route render={() => {
             return <TaskList tasks={tasks}/>
             }} />
