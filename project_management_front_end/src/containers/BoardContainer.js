@@ -11,10 +11,10 @@ const BoardContainer = () => {
         const boardPromise = request.get('/api/boards')
         const taskPromise = request.get('/api/tasks')
     
-        Promise.all([taskPromise, boardPromise])
+        Promise.all([boardPromise, taskPromise, ])
         .then((data) => {
-            setTasks(data[0]);
-            setBoards(data[1]);
+            setBoards(data[0]);
+            setTasks(data[1]);
         })
     }
 
@@ -90,20 +90,20 @@ const BoardContainer = () => {
         
         <>
         <Switch>
-            <Route exact path = '/tasks/new' render={() =>{
-            return <TaskForm boards={boards} onCreate={handlePost}/>
+            <Route exact path = '/boards/new' render={() =>{
+            return <BoardForm boards={boards} onCreate={handlePost}/>
             }}/> 
 
-            <Route exact path="/tasks/:id/edit" render={(props) =>{
+            <Route exact path="/boards/:id/edit" render={(props) =>{
             const id = props.match.params.id;
-            const task = findTaskById(id);
-            return <TaskForm task={task} boards={boards} onUpdate={handleUpdate}/>
+            const board = findBoardById(id);
+            return <BoardForm board={board} boards={boards} onUpdate={handleUpdate}/>
             }}/>  
 
-            <Route exact path="/tasks/:id" render={(props) =>{
+            <Route exact path="/boards/:id" render={(props) =>{
             const id = props.match.params.id;
-            const task = findTaskById(id);
-            return <TaskDetail task={task}
+            const board = findBoardById(id);
+            return <BoardDetail board={board}
             onDelete={handleDelete}
             onUpdate={handleUpdate} 
             raids={raids} 
@@ -111,7 +111,7 @@ const BoardContainer = () => {
             }}/>
 
             <Route render={() => {
-            return <TaskList tasks={tasks}/>
+            return <BoardList boards={boards}/>
             }} />
         </Switch>
         </>
@@ -120,20 +120,4 @@ const BoardContainer = () => {
 
 
 export default BoardContainer;
-
-
-        // May not be needed with a Java back-end.. 
-
-    // const [boards, setBoards] = useState(null)
-    // const [selectedBoard, setSelectedBoard] = useState(null)
-
-    // const onBoardClick = function (board) {
-    //     fetch()
-    //         .then(res => res.json())
-    //         .then(data => setSelectedBoard(data))
-    // }
-
-    // const onHomeClick = function () {
-    //     setSelectedBoard(null);
-    // }
 
