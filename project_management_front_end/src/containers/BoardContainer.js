@@ -14,7 +14,7 @@ const BoardContainer = () => {
             <div className="main-nav-bar-container">
                 <NavBar />
             </div>
-            <div className="Board-container">
+            <div className="board-container">
                 <h1>Board Container</h1>
                 <p>I am the Board Container..</p>
                 <BoardForm />

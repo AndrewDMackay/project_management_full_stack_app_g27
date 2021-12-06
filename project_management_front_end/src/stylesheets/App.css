@@ -45,6 +45,49 @@ body {
   }
 
 
+/*  Board Container, flex, etc.. */
+
+.board-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+  
+    margin-left: 10.0vw;
+    margin-right: 10.0vw;
+    margin-top: 0.0vw;
+    padding: 5.0vw;
+  
+    border: 0.1vw solid #B2B2B2;
+    /* background-color: #090909; */
+    /* box-shadow: 0.0vw 0.0vw 0.6vw #92A0AD; */
+  }
+
+
+/*  Task Container, flex, etc.. */
+
+.task-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+  
+    margin-left: 10.0vw;
+    margin-right: 10.0vw;
+    margin-top: 0.0vw;
+    padding: 5.0vw;
+  
+    border: 0.1vw solid #B2B2B2;
+    /* background-color: #090909; */
+    /* box-shadow: 0.0vw 0.0vw 0.6vw #92A0AD; */
+  }
+
 
 /* Main Nav Bar.. */
 
@@ -60,13 +103,13 @@ body {
     border: 0.1vw solid #B2B2B2;
     /* box-shadow: 0.0vw 0.0vw 0.1vw #92A0AD; */
   
-    color: #FFFFFF;
+    /* color: #FFFFFF; */
     font-weight: bold;
     text-decoration: none;
     cursor: pointer;
   }
   
-  .main-nav-bar ul {
+.main-nav-bar ul {
     margin: 0.0vw;
     padding: 0.5vw;
   
@@ -76,10 +119,11 @@ body {
     justify-content: space-evenly;
     }
   
-  .main-nav-bar li {
-    font-size: 2.0vw;
+.main-nav-bar li {
+    font-size: 1.5vw;
     float: left;
     padding: 0.5vw;
     padding-left: 1.5vw;
   }
+  
   

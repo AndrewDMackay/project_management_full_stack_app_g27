@@ -9,8 +9,17 @@ const NavBar = () => {
         <>
             <header>
                 <div className="main-nav-bar">
-                <h1>Nav Bar</h1>
-                <p>I am the Nav Bar..</p>
+                    <ul>
+                        <li>
+                            <p>I am the Nav Bar..</p>
+                        </li>
+                        <li>
+                            <p>I am the Nav Bar..</p>
+                        </li>
+                        <li>
+                            <p>I am the Nav Bar..</p>
+                        </li>
+                    </ul>
                     {/* <ul>
                         <li>
                             <Link to="/">Home</Link>
