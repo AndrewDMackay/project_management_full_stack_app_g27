@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 
 
-const TaskListItem = () => {
+const BoardListItem = () => {
 
     return (
         <>
-            <div className="task-list-item-container">
+            <div className="board-list-item-container">
                 <h1>Task List Item</h1>
                 <p>I am the Task List Item..</p>
             </div>
@@ -15,5 +15,5 @@ const TaskListItem = () => {
 }
 
 
-export default TaskListItem;
+export default BoardListItem;
 

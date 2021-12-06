@@ -5,7 +5,7 @@ const TaskForm = () => {
 
     return (
         <>
-            <div className="Task-Form-container">
+            <div className="task-form-container">
                 <h1>Task Form</h1>
                 <p>I am the Task Form..</p>
             </div>

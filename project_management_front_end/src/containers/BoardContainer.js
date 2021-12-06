@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { Route, Routes, Switch } from 'react-router-dom';
 
-
+import Request from '../helpers/request';
 import NavBar from '../components/nav/NavBar';
+import BoardForm from '../components/boards/BoardForm';
+import BoardList from '../components/boards/BoardList';
+import BoardListItem from '../components/boards/BoardListItem';
+import BoardDetail from '../components/boards/BoardDetail';
 
 const BoardContainer = () => {
 
@@ -14,6 +17,10 @@ const BoardContainer = () => {
             <div className="Board-container">
                 <h1>Board Container</h1>
                 <p>I am the Board Container..</p>
+                <BoardForm />
+                <BoardList />
+                <BoardListItem />
+                <BoardDetail />
             </div>
         </>
     )

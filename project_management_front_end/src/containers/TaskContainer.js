@@ -1,6 +1,11 @@
 import React, {useState, useEffect} from 'react';
 
+import Request from '../helpers/request';
 import NavBar from '../components/nav/NavBar';
+import TaskForm from '../components/tasks/TaskForm';
+import TaskDetail from '../components/tasks/TaskDetail';
+import TaskList from '../components/tasks/TaskList';
+import TaskListItem from '../components/tasks/TaskListItem';
 
 
 const TaskContainer = () => {
@@ -13,6 +18,10 @@ const TaskContainer = () => {
             <div className="task-container">
                 <h1>Task Container</h1>
                 <p>I am the Task Container..</p>
+                <TaskForm />
+                <TaskList />
+                <TaskListItem />
+                <TaskDetail />
             </div>
         </>
     )

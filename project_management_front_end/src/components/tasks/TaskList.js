@@ -5,7 +5,7 @@ const TaskList = () => {
 
     return (
         <>
-            <div className="Task-List-container">
+            <div className="task-list-container">
                 <h1>Task List</h1>
                 <p>I am the Task List..</p>
             </div>

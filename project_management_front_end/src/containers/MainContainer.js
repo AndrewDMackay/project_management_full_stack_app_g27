@@ -6,6 +6,7 @@ import NavBar from '../components/nav/NavBar';
 const MainContainer = () => {
 
     return (
+        
         <>
             <div className="main-nav-bar-container">
                 <NavBar />

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 
 const NavBar = () => {
@@ -9,7 +9,9 @@ const NavBar = () => {
         <>
             <header>
                 <div className="main-nav-bar">
-                    <ul>
+                <h1>Nav Bar</h1>
+                <p>I am the Nav Bar..</p>
+                    {/* <ul>
                         <li>
                             <Link to="/">Home</Link>
                         </li>
@@ -19,7 +21,7 @@ const NavBar = () => {
                         <li>
                             <Link to="/tasks">Tasks</Link>
                         </li>
-                    </ul>
+                    </ul> */}
                 </div>
             </header>
         </>
