@@ -6,5 +6,80 @@ font-family: 'Roboto', sans-serif;
 font-family: 'Roboto Condensed', sans-serif; */
 
 
+/* Main body.. */
+
+body {
+    font-family: 'Amatic SC', cursive;
+    font-size: 1.0vw;
+    color: #000000;
+    /* text-shadow: 0.0vw 0.0vw 0.5vw #8D8D8D; */
+    margin: 0;
+  
+    background-color: #FDFDFF; 
+    /* background: url('../static/images/alan_diaz_unsplash_background_1.jpg'); */
+    /* background-repeat: no-repeat;
+    background-attachment: fixed; */
+    background-size: 100vw;
+  }
 
 
+/*  Main Container, flex, etc.. */
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+  
+    margin-left: 10.0vw;
+    margin-right: 10.0vw;
+    margin-top: 0.0vw;
+    padding: 5.0vw;
+  
+    border: 0.1vw solid #B2B2B2;
+    /* background-color: #090909; */
+    /* box-shadow: 0.0vw 0.0vw 0.6vw #92A0AD; */
+  }
+
+
+
+/* Main Nav Bar.. */
+
+.main-nav-bar-container {
+    float: left;
+    /* overflow: hidden; */
+  
+    margin: 0.0vw;
+    min-width: 99.75vw;
+    min-height: 5.0vw;
+  
+    /* background-color: #000000; */
+    border: 0.1vw solid #B2B2B2;
+    /* box-shadow: 0.0vw 0.0vw 0.1vw #92A0AD; */
+  
+    color: #FFFFFF;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .main-nav-bar ul {
+    margin: 0.0vw;
+    padding: 0.5vw;
+  
+    list-style-type: none; 
+    text-align: center;
+    align-content: center;
+    justify-content: space-evenly;
+    }
+  
+  .main-nav-bar li {
+    font-size: 2.0vw;
+    float: left;
+    padding: 0.5vw;
+    padding-left: 1.5vw;
+  }
+  
