@@ -16,9 +16,9 @@ body {
     margin: 0;
   
     background-color: #FDFDFF; 
-    /* background: url('../static/images/alan_diaz_unsplash_background_1.jpg'); */
-    /* background-repeat: no-repeat;
-    background-attachment: fixed; */
+    background: url('../static/images/waldemar-brandt-unsplash-1.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     background-size: 100vw;
   }
 
@@ -40,7 +40,7 @@ body {
     padding: 5.0vw;
   
     border: 0.1vw solid #B2B2B2;
-    /* background-color: #090909; */
+    background-color: #FDFDFF; 
     /* box-shadow: 0.0vw 0.0vw 0.6vw #92A0AD; */
   }
 
@@ -62,7 +62,7 @@ body {
     padding: 5.0vw;
   
     border: 0.1vw solid #B2B2B2;
-    /* background-color: #090909; */
+    background-color: #FDFDFF; 
     /* box-shadow: 0.0vw 0.0vw 0.6vw #92A0AD; */
   }
 
@@ -84,7 +84,7 @@ body {
     padding: 5.0vw;
   
     border: 0.1vw solid #B2B2B2;
-    /* background-color: #090909; */
+    background-color: #FDFDFF; 
     /* box-shadow: 0.0vw 0.0vw 0.6vw #92A0AD; */
   }
 
@@ -99,7 +99,7 @@ body {
     min-width: 99.75vw;
     min-height: 5.0vw;
   
-    /* background-color: #000000; */
+    background-color: #FDFDFF; 
     border: 0.1vw solid #B2B2B2;
     /* box-shadow: 0.0vw 0.0vw 0.1vw #92A0AD; */
   
