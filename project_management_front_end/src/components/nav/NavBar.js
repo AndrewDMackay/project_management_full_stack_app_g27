@@ -3,13 +3,12 @@ import React, { useState } from "react";
 import {BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom';
 
 
-const NavBar = ({ }) => {
-
-
+const NavBar = () => {
 
     return (
 
         <>
+        <header>
             <div className="main-nav-bar">
                 <ul>
                     <li>
@@ -23,6 +22,7 @@ const NavBar = ({ }) => {
                     </li>
                 </ul>
             </div>
+        </header>
         </>
     )
 };
