@@ -1,5 +1,5 @@
 import react from 'react';
-import {BrowserRouter as Router, Route, Routes, Switch} from 'react-router-dom';
+import {BrowserRouter as Router, Route} from 'react-router-dom';
 
 import MainContainer from './containers/MainContainer';
 import BoardContainer from './containers/BoardContainer';
@@ -22,13 +22,9 @@ function App() {
             <script src="https://kit.fontawesome.com/a68a14eaee.js" crossorigin="anonymous"></script>        
           </head>
           <div>
-            {/* <Switch> */}
-            <Routes>
               <Route exact path="/" component={MainContainer} />
               <Route exact path="/boards" component={BoardContainer} />
               <Route exact path="/tasks" component={TaskContainer} />
-            </Routes>
-            {/* </Switch> */}
           </div>
         </div>
       </>
