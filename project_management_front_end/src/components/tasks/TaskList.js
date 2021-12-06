@@ -1,29 +1,17 @@
-// import React from 'react';
-// import TaskListItem from './TaskListItem';
+import React, { useState, useEffect } from 'react';
 
-// const TaskList = ({tasks}) => {
+const TaskList = () => {
 
-// 	if (tasks.length === 0){
-// 	  return (<p>Loading..</p>)
-// 	}
+    return (
+        <>
+            <div className="Task-List-container">
+                <h1>Task List</h1>
+                <p>I am the Task List..</p>
+            </div>
+        </>
+    )
 
-// 	const tasksNodes = tasks.map((task, index) => {
-// 	  return (
-// 	    <li key={index} className="component-item">
-// 	    <div className="component">
-// 	    <TaskListItem task={task} />
-// 	    </div>
-// 	    </li>
-// 	  )
-// 	})
+}
 
-// 	return (
-// 	  <ul className="component-list">
-// 	    {tasksNodes}
-// 	  </ul>
-// 	)
-// }
-
-
-//  export default TaskList;
+export default TaskForm;
 

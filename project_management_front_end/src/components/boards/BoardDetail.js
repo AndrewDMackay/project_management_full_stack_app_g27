@@ -6,7 +6,7 @@ const BoardDetail = () => {
         <>
             <div className="board-detail-container">
                 <h1>Board Detail</h1>
-                <p>I am the board detail..</p>
+                <p>I am the Board Detail..</p>
             </div>
         </>
     )

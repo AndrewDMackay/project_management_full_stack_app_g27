@@ -1,22 +1,17 @@
-// import React from 'react';
-// import {Link} from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
 
-// const TaskListItem = ({task}) => {
+const TaskList = () => {
 
-//   if (!task){
-//     return (<p>Loading..</p>)
-//   }
+    return (
+        <>
+            <div className="Task-List-container">
+                <h1>Task List Item</h1>
+                <p>I am the Task List Item..</p>
+            </div>
+        </>
+    )
 
-//   const url = "/tasks/" + task.id;
+}
 
-//   return (
-//     <>
-//     <div>
-//         <p>I am the TaskListItem..</p>
-//     </div>
-//     </>
-//   )
-// }
-
-// export default TaskListItem;
+export default TaskForm;
 
