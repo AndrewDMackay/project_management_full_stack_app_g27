@@ -1,5 +1,8 @@
 import React, {useState, useEffect} from 'react';
 
+import NavBar from '../components/nav/NavBar';
+
+
 const TaskContainer = () => {
 
     return (

@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Route, Routes, Switch } from 'react-router-dom';
 
-import BoardForm from '../components/boards/BoardForm';
-import BoardList from '../components/boards/BoardList';
-import BoardDetail from '../components/boards/BoardDetail';
+
+import NavBar from '../components/nav/NavBar';
 
 const BoardContainer = () => {
 

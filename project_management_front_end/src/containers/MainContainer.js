@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 
 import NavBar from '../components/nav/NavBar';
 
+
 const MainContainer = () => {
 
     return (
