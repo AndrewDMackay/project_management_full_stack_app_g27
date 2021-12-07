@@ -6,7 +6,7 @@ const BoardDetail = ({ board, selectedBoard, onDelete, onUpdate }) => {
 
     // Loading message..
 
-    if (!board) {
+    if (!selectedBoard) {
         return (
             <div className="loading-message-container">
                 <p>Loading..</p>
@@ -17,9 +17,9 @@ const BoardDetail = ({ board, selectedBoard, onDelete, onUpdate }) => {
     return (
         <>
             <div className="board-list-item-container">
-            <h1>Board Detail</h1>
-               <TaskList tasks={board.tasks}/>
-               <TaskList tasks={selectedBoard.tasks}/>
+                <h1>{selectedBoard.name}</h1>
+                <p>{selectedBoard.comment}</p>
+                <TaskList tasks={selectedBoard.tasks} />
             </div>
         </>
     )
