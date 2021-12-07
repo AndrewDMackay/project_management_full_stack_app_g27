@@ -11,7 +11,7 @@ import BoardDetail from '../components/boards/BoardDetail';
 
 const BoardContainer = () => {
 
-    const [boards, setBoards] = useState([]);
+    const [boards, setBoards] = useState(null);
 
     const requestAll = function () {
         const request = new Request();
@@ -100,9 +100,9 @@ const BoardContainer = () => {
             <div>
                 <h1>Board Container</h1>
                 <p>I am the Board Container..</p>
-                {/* <BoardForm />
-                <BoardList />
-                <BoardListItem />
+                {/* <BoardForm /> */}
+                {boards && <BoardList boards={boards}/>}
+                {/* <BoardListItem />
                 <BoardDetail /> */}
             </div>
             <Routes>

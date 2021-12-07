@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import BoardListItem from './BoardListItem'
 
 
 const BoardList = ({ boards }) => {
@@ -8,15 +9,14 @@ const BoardList = ({ boards }) => {
             <div className="loading-message-container">
                 <p>Loading..</p>
             </div>
-
         )
     }
 
-    const boardsNodes = boards.map((board, index) => {
+    const boardNodes = boards.map((board, index) => {
         return (
             <li key={index} className="board-unordered-list-li">
                 <div>
-                    <Board board={board} />
+                    <BoardListItem board={board} />
                 </div>
             </li>
         )
@@ -29,7 +29,7 @@ const BoardList = ({ boards }) => {
                 <p>I am the Board List..</p>
                 <div>
                     <ul className="board-unordered-list">
-                        {boardsNodes}
+                        {boardNodes}
                     </ul>
                 </div>
             </div>
