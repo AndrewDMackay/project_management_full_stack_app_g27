@@ -29,7 +29,7 @@ const BoardContainer = () => {
     }, [])
 
 
-    //  Toggle selected board..
+    //  Toggle selected board, and set selected board to null, return home..
 
     const onBoardClick = function (board) {
         setSelectedBoard(board);

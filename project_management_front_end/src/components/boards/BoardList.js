@@ -14,6 +14,8 @@ const BoardList = ({ boards, onBoardClick }) => {
         )
     }
 
+    // Map board nodes..
+
     const boardNodes = boards.map((board, index) => {
         return (
             <li key={index} className="board-unordered-list-li">

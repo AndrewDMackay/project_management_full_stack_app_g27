@@ -11,6 +11,8 @@ const BoardListItem = ({ board, onBoardClick }) => {
         </div>
     }
 
+    //  Toggle selected board..
+
     const handleClick = function () {
         onBoardClick(board);
     }
