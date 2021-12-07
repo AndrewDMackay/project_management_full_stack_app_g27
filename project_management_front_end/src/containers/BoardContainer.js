@@ -123,15 +123,15 @@ const BoardContainer = () => {
                     <Route exact path="/boards/:id/edit" render={(props) => {
                         const id = props.match.params.id;
                         const board = findBoardById(id);
-                        return <BoardForm board={board} boards={boards} onUpdate={handleUpdateBoard} />
+                        return <BoardForm board={board} boards={boards} onUpdateBoard={handleUpdateBoard} />
                     }} />
 
                     <Route exact path="/boards/:id" render={(props) => {
                         const id = props.match.params.id;
                         const board = findBoardById(id);
                         return <BoardDetail board={board}
-                            onDelete={handleDeleteBoard}
-                            onUpdate={handleUpdateBoard}
+                            onDeleteBoard={handleDeleteBoard}
+                            onUpdateBoard={handleUpdateBoard}
                         />
                     }} />
 

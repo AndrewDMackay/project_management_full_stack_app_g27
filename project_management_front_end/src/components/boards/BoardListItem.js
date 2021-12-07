@@ -18,7 +18,7 @@ const BoardListItem = ({ board, onBoardClick }) => {
         onBoardClick(board);
     }
 
-     //  Link to board by Id..
+    //  Link to board by Id..
 
     // const boardById = "/boards/" + board.id;
 

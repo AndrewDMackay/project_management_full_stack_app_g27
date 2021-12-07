@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import TaskList from '../tasks/TaskList';
 
 
-const BoardDetail = ({ selectedBoard, onHomeClick }) => {
+const BoardDetail = ({ selectedBoard, onHomeClick, onDeleteBoard, onUpdateBoard }) => {
 
     // Loading message..
 
@@ -14,9 +14,54 @@ const BoardDetail = ({ selectedBoard, onHomeClick }) => {
         )
     }
 
-    const handleClick = function(){
+    // Return to boards from detail..
+
+    const handleClick = function () {
         onHomeClick();
     }
+
+
+    const handleDeleteBoard = () => {
+        onDeleteBoard(selectedBoard.id)
+    }
+
+    const handleHandleDeleteTask = (taskIndex) => {
+        let copiedSelectedBoard = { ...selectedBoard }
+        copiedSelectedBoard.tasks.splice(taskIndex, 1)
+        onUpdateBoard(selectedBoard)
+    }
+
+    const boardHasTask = (task) =>{
+      return selectedBoard.tasks.some((selectedBoardTask) => {
+        return task.id === selectedBoardTask.id
+      })
+    }
+
+    // const handleSubmit = (event) => {
+    //   event.preventDefault();
+    //   const index = parseInt(event.target.tasks.value)
+    //   const task = tasks[index];
+    //   board.tasks.push(task)
+    //   onUpdate(board);
+    // }
+
+    // const boardsTasks = board.tasks.map((task, index) => {
+    //   return <li key={index}>
+    //   {task.location}<button onClick={() => handleDeleteTask(index)}>Delete</button>
+    //   </li>
+    // })
+
+    // const editUrl = "/boards/" + board.id + "/edit"
+
+    // const taskOptions = tasks.map((task, index) => {
+    //   if (!boardHasTask(task)){
+    //     return (
+    //       <option key={index} value={index}>{task.location}</option>
+    //     )
+    //   } else {
+    //     return null
+    //   }
+    // })  
 
     return (
         <>
