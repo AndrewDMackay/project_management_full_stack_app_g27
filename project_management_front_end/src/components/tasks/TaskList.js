@@ -2,11 +2,11 @@ import React, { useState, useEffect } from 'react';
 import TaskListItem from './TaskListItem';
 
 
-const TaskList = (board) => {
+const TaskList = ({ selectedBoard }) => {
 
     // Loading message..
 
-    if (board.tasks.length === 0) {
+    if (!selectedBoard) {
         return (
             <div className="loading-message-container">
                 <p>Loading..</p>
@@ -16,7 +16,7 @@ const TaskList = (board) => {
 
     // Map board nodes..
 
-    const taskNodes = board.tasks.map((task, index) => {
+    const taskNodes = selectedBoard.tasks.map((task, index) => {
 
         return (
             <li key={index} className="task-unordered-list-li">
