@@ -22,14 +22,11 @@ function App() {
             <script src="https://kit.fontawesome.com/a68a14eaee.js" crossorigin="anonymous"></script>
           </head>
           <div>
-            {/* <Routes>
-              <Route exact path="/" component={MainContainer} />
-              <Route exact path="/boards" component={BoardContainer} />
-              <Route exact path="/tasks" component={TaskContainer} />
-            </Routes> */}
-            <MainContainer />
-            <BoardContainer />
-            <TaskContainer />
+            <Routes>
+              <Route exact path="/" element={<MainContainer />} />
+              <Route exact path="/boards" element={<BoardContainer />} />
+              <Route exact path="/tasks" element={<TaskContainer />} />
+            </Routes>
           </div>
         </div>
       </>
