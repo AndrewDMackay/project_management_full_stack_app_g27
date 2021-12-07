@@ -4,6 +4,8 @@ import BoardListItem from './BoardListItem'
 
 const BoardList = ({ boards }) => {
 
+    // Loading message..
+    
     if (boards.length === 0) {
         return (
             <div className="loading-message-container">
