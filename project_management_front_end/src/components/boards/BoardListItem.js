@@ -16,13 +16,8 @@ const BoardListItem = ({ board }) => {
     return (
         <>
             <div className="board-list-item-container">
-                <h1>Board List Item</h1>
-                <p>I am the Board List Item..</p>
-                <p>Date {task.date}</p>
-                <p>Time {task.time}</p>
-                <p>Comment {task.comment}</p>
-                <p>Priority {task.priority}</p>
-                <p>Completed {task.completed}</p>
+                <h1>Name {board.name}</h1>
+                <p>Comment {board.comment}</p>
             </div>
         </>
     )
