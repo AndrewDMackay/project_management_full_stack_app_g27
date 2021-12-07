@@ -17,6 +17,7 @@ const BoardDetail = ({ board, selectedBoard, onDelete, onUpdate }) => {
     return (
         <>
             <div className="board-list-item-container">
+            <h1>Board Detail</h1>
                <TaskList tasks={board.tasks}/>
                <TaskList tasks={selectedBoard.tasks}/>
             </div>

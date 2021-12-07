@@ -106,7 +106,8 @@ const BoardContainer = () => {
             <div className="board-container">
                 <div>
                     <h1>Board Container</h1>
-                    {!selectedBoard? boards && <BoardList boards={boards} onBoardClick={onBoardClick} /> : null}
+                    {/* {boards && <BoardList boards={boards} onBoardClick={onBoardClick}/>} */}
+                    {!selectedBoard? <BoardList boards={boards} onBoardClick={onBoardClick} /> : null}
                     {selectedBoard ? <BoardDetail selectedBoard={selectedBoard} /> : null}
                 </div>
                 <Routes>
