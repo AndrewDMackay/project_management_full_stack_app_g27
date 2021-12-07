@@ -14,6 +14,8 @@ const TaskList = (board) => {
         )
     }
 
+    // Map board nodes..
+
     const taskNodes = board.tasks.map((task, index) => {
 
         return (
