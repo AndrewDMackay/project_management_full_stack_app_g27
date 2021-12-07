@@ -2,7 +2,9 @@ import React, { useState, useEffect } from 'react';
 import TaskListItem from './TaskListItem';
 
 
-const TaskList = ( board ) => {
+const TaskList = (board) => {
+
+    // Loading message..
 
     const taskNodes = board.tasks.map((task, index) => {
         return (
