@@ -17,7 +17,11 @@ const TaskListItem = ({ selectedBoard }) => {
         <>
             <div className="task-list-item-container">
                 <h1>Task List Item</h1>
-                <p>I am the Task List Item..</p>
+                <p>Date {selectedBoard.task.date}</p>
+                <p>Time {selectedBoard.task.time}</p>
+                <p>Comment {selectedBoard.task.comment}</p>
+                <p>Priority {selectedBoard.task.priority}</p>
+                <p>Completed {selectedBoard.task.completed}</p>
             </div>
         </>
     )
