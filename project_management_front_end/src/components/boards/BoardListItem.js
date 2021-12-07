@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 
 const BoardListItem = ({ board, onBoardClick }) => {
@@ -17,7 +18,9 @@ const BoardListItem = ({ board, onBoardClick }) => {
         onBoardClick(board);
     }
 
-    const url = "/boards/" + board.id;
+     //  Link to board by Id..
+
+    // const boardById = "/boards/" + board.id;
 
     return (
         <>
@@ -26,6 +29,10 @@ const BoardListItem = ({ board, onBoardClick }) => {
                     <h1>Name {board.name}</h1>
                     <p>Comment {board.comment}</p>
                 </div>
+                {/* <Link to={boardById} className="test">
+                    <h1>Name {board.name}</h1>
+                    <p>Comment {board.comment}</p>
+                </Link> */}
             </div>
         </>
     )
