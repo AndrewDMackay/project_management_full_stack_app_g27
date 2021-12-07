@@ -97,38 +97,38 @@ const BoardContainer = () => {
                 <NavBar />
             </div>
             <div className="board-container">
-            <div>
-                <h1>Board Container</h1>
-                <p>I am the Board Container..</p>
-                {/* <BoardForm /> */}
-                {boards && <BoardList boards={boards}/>}
-                {/* <BoardListItem />
+                <div>
+                    <h1>Board Container</h1>
+                    <p>I am the Board Container..</p>
+                    {/* <BoardForm /> */}
+                    {boards && <BoardList boards={boards} />}
+                    {/* <BoardListItem />
                 <BoardDetail /> */}
-            </div>
-            <Routes>
-                <Route exact path='/boards/new' render={() => {
-                    return <BoardForm boards={boards} onCreate={handlePostBoard} />
-                }} />
+                </div>
+                <Routes>
+                    <Route exact path='/boards/new' render={() => {
+                        return <BoardForm boards={boards} onCreate={handlePostBoard} />
+                    }} />
 
-                <Route exact path="/boards/:id/edit" render={(props) => {
-                    const id = props.match.params.id;
-                    const board = findBoardById(id);
-                    return <BoardForm board={board} boards={boards} onUpdate={handleUpdateBoard} />
-                }} />
+                    <Route exact path="/boards/:id/edit" render={(props) => {
+                        const id = props.match.params.id;
+                        const board = findBoardById(id);
+                        return <BoardForm board={board} boards={boards} onUpdate={handleUpdateBoard} />
+                    }} />
 
-                <Route exact path="/boards/:id" render={(props) => {
-                    const id = props.match.params.id;
-                    const board = findBoardById(id);
-                    return <BoardDetail board={board}
-                        onDelete={handleDeleteBoard}
-                        onUpdate={handleUpdateBoard}
-                    />
-                }} />
+                    <Route exact path="/boards/:id" render={(props) => {
+                        const id = props.match.params.id;
+                        const board = findBoardById(id);
+                        return <BoardDetail board={board}
+                            onDelete={handleDeleteBoard}
+                            onUpdate={handleUpdateBoard}
+                        />
+                    }} />
 
-                <Route render={() => {
-                    return <BoardList boards={boards} />
-                }} />
-            </Routes>
+                    <Route render={() => {
+                        return <BoardList boards={boards} />
+                    }} />
+                </Routes>
             </div>
         </>
     )
