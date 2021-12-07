@@ -15,7 +15,7 @@ const BoardListItem = ({ board, onBoardClick }) => {
         onBoardClick(board);
     }
 
-    // const url = "/boards/" + board.id;
+    const url = "/boards/" + board.id;
 
     return (
         <>

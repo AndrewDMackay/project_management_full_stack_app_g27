@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import TaskList from '../tasks/TaskList';
 
 
-const BoardDetail = ({ board, selectedBoard, onDelete, onUpdate }) => {
+const BoardDetail = ({ selectedBoard, onHomeClick }) => {
 
     // Loading message..
 
@@ -14,12 +14,17 @@ const BoardDetail = ({ board, selectedBoard, onDelete, onUpdate }) => {
         )
     }
 
+    const handleClick = function(){
+        onHomeClick();
+    }
+
     return (
         <>
             <div className="board-list-item-container">
                 <h1>{selectedBoard.name}</h1>
                 <p>{selectedBoard.comment}</p>
                 <TaskList tasks={selectedBoard.tasks} />
+                <button className="home-button" onClick={handleClick}>Home</button>
             </div>
         </>
     )

@@ -35,6 +35,10 @@ const BoardContainer = () => {
         setSelectedBoard(board);
     }
 
+    const onHomeClick = function(){
+        setSelectedBoard(null);
+    }
+
 
     const findBoardById = function (id) {
         return boards.find((board) => {
@@ -108,7 +112,7 @@ const BoardContainer = () => {
                     <h1>Board Container</h1>
                     {/* {boards && <BoardList boards={boards} onBoardClick={onBoardClick}/>} */}
                     {!selectedBoard? <BoardList boards={boards} onBoardClick={onBoardClick} /> : null}
-                    {selectedBoard ? <BoardDetail selectedBoard={selectedBoard} /> : null}
+                    {selectedBoard ? <BoardDetail selectedBoard={selectedBoard} onHomeClick={onHomeClick}/> : null}
                 </div>
                 <Routes>
                     <Route exact path='/boards/new' render={() => {

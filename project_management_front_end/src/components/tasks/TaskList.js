@@ -6,7 +6,16 @@ const TaskList = (board) => {
 
     // Loading message..
 
+    if (board.tasks.length === 0) {
+        return (
+            <div className="loading-message-container">
+                <p>Loading..</p>
+            </div>
+        )
+    }
+
     const taskNodes = board.tasks.map((task, index) => {
+
         return (
             <li key={index} className="task-unordered-list-li">
                 <div>
