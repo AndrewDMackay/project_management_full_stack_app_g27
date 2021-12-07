@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 
 
-const TaskListItem = ({ selectedBoard }) => {
+const TaskListItem = ({ task }) => {
 
     // Loading message..
 
-    if (!selectedBoard) {
+    if (!task) {
         return (
             <div className="loading-message-container">
                 <p>Loading..</p>
@@ -17,11 +17,11 @@ const TaskListItem = ({ selectedBoard }) => {
         <>
             <div className="task-list-item-container">
                 <h1>Task List Item</h1>
-                <p>Date {selectedBoard.task.date}</p>
-                <p>Time {selectedBoard.task.time}</p>
-                <p>Comment {selectedBoard.task.comment}</p>
-                <p>Priority {selectedBoard.task.priority}</p>
-                <p>Completed {selectedBoard.task.completed}</p>
+                <p>Date {task.date}</p>
+                <p>Time {task.time}</p>
+                <p>Comment {task.comment}</p>
+                <p>Priority {task.priority}</p>
+                <p>Completed {task.completed}</p>
             </div>
         </>
     )

@@ -2,11 +2,11 @@ import React, { useState, useEffect } from 'react';
 import TaskListItem from './TaskListItem';
 
 
-const TaskList = ({ selectedBoard }) => {
+const TaskList = ({ tasks }) => {
 
     // Loading message..
 
-    // if (!selectedBoard) {
+    // if (!tasks) {
     //     return (
     //         <div className="loading-message-container">
     //             <p>Loading..</p>
@@ -16,12 +16,12 @@ const TaskList = ({ selectedBoard }) => {
 
     // Map task nodes..
 
-    const taskNodes = selectedBoard.tasks.map((task, index) => {
+    const taskNodes = tasks.map((task, index) => {
 
         return (
             <li key={index} className="task-unordered-list-li">
                 <div>
-                    <TaskListItem task={task} index={index} />
+                    <TaskListItem task={task} key={index} />
                 </div>
             </li>
         )

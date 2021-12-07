@@ -20,7 +20,7 @@ const BoardList = ({ boards, onBoardClick }) => {
         return (
             <li key={index} className="board-unordered-list-li">
                 <div>
-                    <BoardListItem board={board} index={index} onBoardClick={onBoardClick}/>
+                    <BoardListItem board={board} key={index} onBoardClick={onBoardClick}/>
                 </div>
             </li>
         )
