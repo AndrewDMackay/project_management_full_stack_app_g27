@@ -1,9 +1,8 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
 import MainContainer from './containers/MainContainer';
 import BoardContainer from './containers/BoardContainer';
-import TaskContainer from './containers/TaskContainer';
 
 import './stylesheets/App.css';
 
@@ -25,7 +24,6 @@ function App() {
             <Routes>
               <Route exact path="/" element={<MainContainer />} />
               <Route exact path="/boards" element={<BoardContainer />} />
-              <Route exact path="/tasks" element={<TaskContainer />} />
             </Routes>
           </div>
         </div>
