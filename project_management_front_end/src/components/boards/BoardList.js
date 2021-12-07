@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import BoardListItem from './BoardListItem'
 
 
-const BoardList = ({ boards, onBoardListItemClick }) => {
+const BoardList = ({ boards, onBoardClick }) => {
 
     // Loading message..
 
@@ -18,7 +18,7 @@ const BoardList = ({ boards, onBoardListItemClick }) => {
         return (
             <li key={index} className="board-unordered-list-li">
                 <div>
-                    <BoardListItem board={board} onBoardListItemClick={onBoardListItemClick}/>
+                    <BoardListItem board={board} index={index} onBoardClick={onBoardClick}/>
                 </div>
             </li>
         )

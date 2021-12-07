@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import TaskList from '../tasks/TaskList';
 
 
-const BoardDetail = ({ board, onDelete, onUpdate }) => {
+const BoardDetail = ({ board, selectedBoard, onDelete, onUpdate }) => {
 
     // Loading message..
 
@@ -18,13 +18,14 @@ const BoardDetail = ({ board, onDelete, onUpdate }) => {
         <>
             <div className="board-list-item-container">
                <TaskList tasks={board.tasks}/>
+               <TaskList tasks={selectedBoard.tasks}/>
             </div>
         </>
     )
 }
 
 
-
+// const BoardDetail = ({ board, selectedBoard, onDelete, onUpdate }) => {
 
 //     const handleDelete = () => {
 //         onDelete(board.id)

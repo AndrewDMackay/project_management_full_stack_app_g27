@@ -31,7 +31,7 @@ const BoardContainer = () => {
 
     //  Board functions.. 
 
-    const onBoardListItemClick = function(board){
+    const onBoardClick = function(board){
         setSelectedBoard(board);
     }
 
@@ -106,11 +106,8 @@ const BoardContainer = () => {
             <div className="board-container">
                 <div>
                     <h1>Board Container</h1>
-                    <p>I am the Board Container..</p>
-                    {/* <BoardForm /> */}
-                    {boards && <BoardList boards={boards} />}
-                    {/* <BoardListItem />
-                <BoardDetail /> */}
+                    {!selectedBoard? boards && <BoardList boards={boards} onBoardClick={onBoardClick} /> : null}
+                    {selectedBoard ? <BoardDetail selectedBoard={selectedBoard} /> : null}
                 </div>
                 <Routes>
                     <Route exact path='/boards/new' render={() => {
