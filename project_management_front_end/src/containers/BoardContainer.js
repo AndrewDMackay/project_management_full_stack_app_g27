@@ -29,16 +29,17 @@ const BoardContainer = () => {
     }, [])
 
 
-    //  Board functions.. 
+    //  Toggle selected board..
 
-    const onBoardClick = function(board){
+    const onBoardClick = function (board) {
         setSelectedBoard(board);
     }
 
-    const onHomeClick = function(){
+    const onHomeClick = function () {
         setSelectedBoard(null);
     }
 
+    //  Board functions.. 
 
     const findBoardById = function (id) {
         return boards.find((board) => {
@@ -111,8 +112,8 @@ const BoardContainer = () => {
                 <div>
                     <h1>Board Container</h1>
                     {/* {boards && <BoardList boards={boards} onBoardClick={onBoardClick}/>} */}
-                    {!selectedBoard? <BoardList boards={boards} onBoardClick={onBoardClick} /> : null}
-                    {selectedBoard ? <BoardDetail selectedBoard={selectedBoard} onHomeClick={onHomeClick}/> : null}
+                    {!selectedBoard ? <BoardList boards={boards} onBoardClick={onBoardClick} /> : null}
+                    {selectedBoard ? <BoardDetail selectedBoard={selectedBoard} onHomeClick={onHomeClick} /> : null}
                 </div>
                 <Routes>
                     <Route exact path='/boards/new' render={() => {
