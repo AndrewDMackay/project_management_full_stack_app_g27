@@ -2,10 +2,10 @@ import React, { useState } from 'react'
 import BoardListItem from './BoardListItem'
 
 
-const BoardList = ({ boards }) => {
+const BoardList = ({ boards, onBoardListItemClick }) => {
 
     // Loading message..
-    
+
     if (boards.length === 0) {
         return (
             <div className="loading-message-container">
@@ -18,7 +18,7 @@ const BoardList = ({ boards }) => {
         return (
             <li key={index} className="board-unordered-list-li">
                 <div>
-                    <BoardListItem board={board} />
+                    <BoardListItem board={board} onBoardListItemClick={onBoardListItemClick}/>
                 </div>
             </li>
         )

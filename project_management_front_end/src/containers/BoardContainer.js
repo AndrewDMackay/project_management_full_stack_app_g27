@@ -12,6 +12,7 @@ import BoardDetail from '../components/boards/BoardDetail';
 const BoardContainer = () => {
 
     const [boards, setBoards] = useState(null);
+    const [selectedBoard, setSelectedBoard] = useState(null);
 
     const requestAll = function () {
         const request = new Request();
@@ -29,6 +30,11 @@ const BoardContainer = () => {
 
 
     //  Board functions.. 
+
+    const onBoardListItemClick = function(board){
+        setSelectedBoard(board);
+    }
+
 
     const findBoardById = function (id) {
         return boards.find((board) => {
@@ -87,7 +93,7 @@ const BoardContainer = () => {
     //         })
     // }
 
-    
+
     if (!boards) {
         return null;
     }

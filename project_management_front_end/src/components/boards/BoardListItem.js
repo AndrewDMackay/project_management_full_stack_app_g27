@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 
-const BoardListItem = ({ board }) => {
+const BoardListItem = ({ board, onBoardListItemClick }) => {
 
     // Loading message..
 
@@ -13,11 +13,17 @@ const BoardListItem = ({ board }) => {
 
     const url = "/boards/" + board.id;
 
+    const handleClick = function () {
+        onBoardListItemClick(board);
+      }
+
     return (
         <>
             <div className="board-list-item-container">
-                <h1>Name {board.name}</h1>
-                <p>Comment {board.comment}</p>
+                <div onClick={handleClick}>
+                    <h1>Name {board.name}</h1>
+                    <p>Comment {board.comment}</p>
+                </div>
             </div>
         </>
     )
