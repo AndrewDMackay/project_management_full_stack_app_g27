@@ -62,7 +62,7 @@ const BoardContainer = () => {
     const handleUpdateBoard = function (board) {
         const request = new Request();
         request.patch('/api/boards/' + board.id, board)
-            .then(() => 
+            .then(() =>
                 window.location = '/boards'
             )
     }
@@ -87,12 +87,12 @@ const BoardContainer = () => {
                 <NavBar />
             </div>
             <div className="board-container">
-                <div>
-                    <h1>Board Container</h1>
-                    {!selectedBoard ? <BoardForm selectedBoard={selectedBoard} onNewBoardSubmit={handlePostBoard} /> : null}
-                    {!selectedBoard ? <BoardList boards={boards} onBoardClick={onBoardClick} /> : null}
-                    {selectedBoard ? <BoardDetail selectedBoard={selectedBoard} onHomeClick={onHomeClick} onNewTaskSubmit={handlePostTask} /> : null}
-                </div>
+                <h1>MY BOARDS.</h1>
+                {!selectedBoard ? <BoardForm selectedBoard={selectedBoard} onNewBoardSubmit={handlePostBoard} /> : null}
+                {!selectedBoard ? <BoardList boards={boards} onBoardClick={onBoardClick} /> : null}
+                {selectedBoard ? <BoardDetail selectedBoard={selectedBoard} onHomeClick={onHomeClick} onNewTaskSubmit={handlePostTask} /> : null}
+            </div>
+            <div>
                 <Routes>
                     <Route exact path='/boards/new' render={() => {
                         return <BoardForm boards={boards} onCreate={handlePostBoard} />
