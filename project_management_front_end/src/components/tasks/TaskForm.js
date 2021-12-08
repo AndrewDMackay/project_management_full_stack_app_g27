@@ -59,9 +59,15 @@ const TaskForm = ({ task, onNewTaskSubmit }) => {
                     <input className="form-inputs" type="date" id="date" placeholder="Enter Date.." value={date} onChange={handleDateChange} required />
                     <input className="form-inputs" type="time" id="time" placeholder="Enter Time.." value={time} onChange={handleTimeChange} required />
                     <input className="form-inputs" type="text" id="comment" placeholder="Enter Comment.." value={comment} onChange={handleCommentChange} required />
-                    <input className="form-inputs" type="checkbox" id="priority" value={priority} onChange={handleCommentChange} required />
-                    <input className="form-inputs" type="checkbox" id="priority" placeholder="Enter Comment.." value={comment} onChange={handleCommentChange} required />
-                    <input type="submit" value="submit" />
+                    <input className="form-inputs" type="checkbox" id="completed" value={completed} onChange={handleCompletedChange} required />
+                    <label className="form-inputs" for="completed">Completed..</label>
+                    <input className="form-inputs" type="radio" id="priority-low" name="priority" value={priority} onChange={handlePriorityChange} required />
+                    <label className="form-inputs" for="priority-low">Low..</label>
+                    <input className="form-inputs" type="radio" id="priority-medium" name="priority" value={priority} onChange={handlePriorityChange} required />
+                    <label className="form-inputs" for="priority-medium">Medium..</label>
+                    <input className="form-inputs" type="radio" id="priority-high" name="priority" value={priority} onChange={handlePriorityChange} required />
+                    <label className="form-inputs" for="priority-high">High..</label>
+                    <input className="form-inputs" type="submit" value="submit" />
                 </form>
             </div>
         </>

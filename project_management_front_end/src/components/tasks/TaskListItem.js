@@ -21,7 +21,10 @@ const TaskListItem = ({ task }) => {
                 <p>Time {task.time}</p>
                 <p>Comment {task.comment}</p>
                 <p>Priority {task.priority}</p>
-                <p>Completed {task.completed}</p>
+                <form>
+                    <input className="form-inputs" type="checkbox" id="completed" value="completed" required />
+                </form>
+                {/* <p>Completed {task.completed}</p> */}
             </div>
         </>
     )

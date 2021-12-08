@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 
 import TaskList from '../tasks/TaskList';
-
+import TaskForm from '../tasks/TaskForm';
 
 const BoardDetail = ({ selectedBoard, onHomeClick }) => {
 
@@ -30,6 +30,7 @@ const BoardDetail = ({ selectedBoard, onHomeClick }) => {
                 <h1>{selectedBoard.name}</h1>
                 <p>{selectedBoard.comment}</p>
                 <TaskList tasks={selectedBoard.tasks} />
+                <TaskForm />
                 <button className="home-button" onClick={handleClick}>Back To Boards..</button>
             </div>
         </>
@@ -38,6 +39,8 @@ const BoardDetail = ({ selectedBoard, onHomeClick }) => {
 
 
 export default BoardDetail;
+
+
 
 
 // Board detail functions..
