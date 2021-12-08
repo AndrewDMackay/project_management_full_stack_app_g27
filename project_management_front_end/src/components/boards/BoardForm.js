@@ -36,11 +36,10 @@ const BoardForm = ({ board, onNewBoardSubmit }) => {
     return (
         <>
             <div className="board-form-container">
-                <h1>New Board</h1>
+                <h2>New Bǒard</h2>
                 <form className="form-container" onSubmit={handleSubmit}>
                     <input className="form-inputs" type="text" id="name" placeholder="Enter Name.." value={name} onChange={handleNameChange} required />
                     <input className="form-inputs" type="text" id="comment" placeholder="Enter Comment.." value={comment} onChange={handleCommentChange} required />
-                    <br/>
                     <input type="submit" value="submit" />
                 </form>
             </div>
