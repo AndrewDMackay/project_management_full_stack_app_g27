@@ -5,7 +5,6 @@ import Request from '../helpers/request';
 import NavBar from '../components/nav/NavBar';
 import BoardForm from '../components/boards/BoardForm';
 import BoardList from '../components/boards/BoardList';
-import BoardListItem from '../components/boards/BoardListItem';
 import BoardDetail from '../components/boards/BoardDetail';
 
 
@@ -111,7 +110,7 @@ const BoardContainer = () => {
             <div className="board-container">
                 <div>
                     <h1>Board Container</h1>
-                    {/* {boards && <BoardList boards={boards} onBoardClick={onBoardClick}/>} */}
+                    {selectedBoard ? <BoardForm selectedBoard={selectedBoard} onNewBoardSubmit={onNewBoardubmit} /> : null}
                     {!selectedBoard ? <BoardList boards={boards} onBoardClick={onBoardClick} /> : null}
                     {selectedBoard ? <BoardDetail selectedBoard={selectedBoard} onHomeClick={onHomeClick} /> : null}
                 </div>

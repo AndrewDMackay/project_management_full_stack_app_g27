@@ -18,9 +18,9 @@ const BoardListItem = ({ board, onBoardClick }) => {
         onBoardClick(board);
     }
 
-    //  Link to board by Id..
+    //  Link to board by Id, alternative..
 
-    // const boardById = "/boards/" + board.id;
+    // const urlBoardById = "/boards/" + board.id;
 
     return (
         <>
@@ -29,7 +29,7 @@ const BoardListItem = ({ board, onBoardClick }) => {
                     <h1>Name {board.name}</h1>
                     <p>Comment {board.comment}</p>
                 </div>
-                {/* <Link to={boardById} className="test">
+                {/* <Link to={urlBoardById} className="test">
                     <h1>Name {board.name}</h1>
                     <p>Comment {board.comment}</p>
                 </Link> */}

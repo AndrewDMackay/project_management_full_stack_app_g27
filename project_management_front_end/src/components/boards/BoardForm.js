@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
 
 
-const BoardForm = ({ board, onDelete, onUpdate }) => {
+const BoardForm = ({ board }) => {
+
+    const [input, setInput] = useState("")
 
     // Loading message..
 
@@ -11,60 +13,40 @@ const BoardForm = ({ board, onDelete, onUpdate }) => {
         </div>
     }
 
-    const handleDelete = () => {
-      onDelete(board.id)
+    // Board form functions.. 
+
+    const handleNameChange = (event) => {
+        setInput(event.target.value)
     }
 
-    // const deleteTask = (taskIndex) => {
-    //   let copiedBoard = {...board}
-    //   copiedBoard.tasks.splice(taskIndex, 1)
-    //   onUpdate(board)
-    // }
-
-    // const boardHasTask = (task) =>{
-    //   return board.tasks.some((boardTask) => {
-    //     return task.id === boardTask.id
-    //   })
-    // }
-
-    // const handleSubmit = (event) => {
-    //   event.preventDefault();
-    //   const index = parseInt(event.target.tasks.value)
-    //   const task = tasks[index];
-    //   board.tasks.push(task)
-    //   onUpdate(board);
-    // }
-
-    // const boardsTasks = board.tasks.map((task, index) => {
-    //   return <li key={index}>
-    //   {task.location}<button onClick={() => deleteTask(index)}>Delete</button>
-    //   </li>
-    // })
-
-    // const editUrl = "/boards/" + board.id + "/edit"
-
-    // const taskOptions = tasks.map((task, index) => {
-    //   if (!boardHasTask(task)){
-    //     return (
-    //       <option key={index} value={index}>{task.location}</option>
-    //     )
-    //   } else {
-    //     return null
-    //   }
-    // })
+    const handleCommentChange = (event) => {
+        setInput(event.target.value)
+    }
 
 
-    return (
-        <>
-            <div className="board-form-container">
-                <h1>Board Form</h1>
-                <p>I am the Board Form..</p>
-            </div>
-        </>
-    )
+    const handleSubmit = (event) => {
+        event.preventDefault()
+        const newBoard = {
+            name: name,
+            comment: comment
 
+        }
+
+
+        return (
+            <>
+                <div className="board-form-container">
+                    <h1>New Board</h1>
+                    <form className="form-container" onSubmit={handleSubmit}>
+                        <input className="form-inputs" type="text" id="name" placeholder="Enter Name.." value={name} onChange={handleNameChange} required />
+                        <input className="form-inputs" type="text" id="comment" placeholder="Enter Comment.." value={comment} onChange={handleCommentChange} required />
+                        <input type="submit" value="submit" />
+                    </form>
+                </div>
+            </>
+        )
+    }
 }
-
 
 export default BoardForm;
 
