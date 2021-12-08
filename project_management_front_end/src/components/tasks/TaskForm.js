@@ -42,8 +42,11 @@ const TaskForm = ({ task, onNewTaskSubmit }) => {
     const handleSubmit = (event) => {
         event.preventDefault()
         const newTask = {
-            name: name,
-            comment: comment
+            date: date,
+            time: time,
+            comment: comment,
+            priority: priority,
+            completed: completed
         }
         onNewTaskSubmit(newTask);
     }
@@ -53,8 +56,11 @@ const TaskForm = ({ task, onNewTaskSubmit }) => {
             <div className="task-form-container">
                 <h1>New Task</h1>
                 <form className="form-container" onSubmit={handleSubmit}>
-                    <input className="form-inputs" type="text" id="name" placeholder="Enter Name.." value={name} onChange={handleNameChange} required />
+                    <input className="form-inputs" type="date" id="date" placeholder="Enter Date.." value={date} onChange={handleDateChange} required />
+                    <input className="form-inputs" type="time" id="time" placeholder="Enter Time.." value={time} onChange={handleTimeChange} required />
                     <input className="form-inputs" type="text" id="comment" placeholder="Enter Comment.." value={comment} onChange={handleCommentChange} required />
+                    <input className="form-inputs" type="checkbox" id="priority" value={priority} onChange={handleCommentChange} required />
+                    <input className="form-inputs" type="checkbox" id="priority" placeholder="Enter Comment.." value={comment} onChange={handleCommentChange} required />
                     <input type="submit" value="submit" />
                 </form>
             </div>
