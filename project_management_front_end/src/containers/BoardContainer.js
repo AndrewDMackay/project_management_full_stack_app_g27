@@ -67,7 +67,6 @@ const BoardContainer = () => {
             })
     }
 
-
     if (!boards) {
         return null;
     }
