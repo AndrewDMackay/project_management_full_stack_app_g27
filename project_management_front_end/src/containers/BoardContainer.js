@@ -40,6 +40,12 @@ const BoardContainer = () => {
 
     //  Board functions.. 
 
+    const handlePostBoard = function (board) {
+        const request = new Request();
+        request.post("/api/boards", board)
+            .then(() => window.location = '/boards')
+    }
+
     const findBoardById = function (id) {
         return boards.find((board) => {
             return board.id === parseInt(id);
@@ -53,19 +59,23 @@ const BoardContainer = () => {
             .then(() => window.location = "/boards")
     }
 
-    const handlePostBoard = function (board) {
-        const request = new Request();
-        request.post("/api/boards", board)
-            .then(() => window.location = '/boards')
-    }
-
     const handleUpdateBoard = function (board) {
         const request = new Request();
         request.patch('/api/boards/' + board.id, board)
-            .then(() => {
-                window.location = '/boards/' + board.id
-            })
+            .then(() => 
+                window.location = '/boards'
+            )
     }
+
+    //  Task functions.. 
+
+    const handlePostTask = function (task) {
+        const request = new Request();
+        request.post("/api/tasks", task)
+            .then(() => window.location = '/boards')
+    }
+
+    // Circuit..
 
     if (!boards) {
         return null;
@@ -79,9 +89,9 @@ const BoardContainer = () => {
             <div className="board-container">
                 <div>
                     <h1>Board Container</h1>
-                    {!selectedBoard ? <BoardForm selectedBoard={selectedBoard} onNewBoardSubmit={handlePostBoard}/> : null}
+                    {!selectedBoard ? <BoardForm selectedBoard={selectedBoard} onNewBoardSubmit={handlePostBoard} /> : null}
                     {!selectedBoard ? <BoardList boards={boards} onBoardClick={onBoardClick} /> : null}
-                    {selectedBoard ? <BoardDetail selectedBoard={selectedBoard} onHomeClick={onHomeClick} /> : null}
+                    {selectedBoard ? <BoardDetail selectedBoard={selectedBoard} onHomeClick={onHomeClick} onNewTaskSubmit={handlePostTask} /> : null}
                 </div>
                 <Routes>
                     <Route exact path='/boards/new' render={() => {
@@ -116,7 +126,7 @@ const BoardContainer = () => {
 export default BoardContainer;
 
 
-    //  Task functions.. 
+    // Unused Task functions..
 
     // const findTaskById = function (id) {
     //     return tasks.find((task) => {
@@ -129,12 +139,6 @@ export default BoardContainer;
     //     const url = "/api/tasks/" + id
     //     request.delete(url)
     //         .then(() => window.location = "/boards")
-    // }
-
-    // const handlePostTask = function (task) {
-    //     const request = new Request();
-    //     request.post("/api/tasks", task)
-    //         .then(() => window.location = '/boards')
     // }
 
     // const handleUpdateTask = function (task) {

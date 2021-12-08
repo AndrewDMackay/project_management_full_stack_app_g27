@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import TaskList from '../tasks/TaskList';
 import TaskForm from '../tasks/TaskForm';
 
-const BoardDetail = ({ selectedBoard, onHomeClick }) => {
+const BoardDetail = ({ selectedBoard, onHomeClick, onNewTaskSubmit }) => {
 
     // Loading message..
 
@@ -22,6 +22,11 @@ const BoardDetail = ({ selectedBoard, onHomeClick }) => {
         onHomeClick();
     }
 
+    const handleNewTask = function(task){
+        task.board = selectedBoard
+        onNewTaskSubmit(task)
+    }
+
     const urlEditBoard = "/boards/" + selectedBoard.id + "/edit"
 
     return (
@@ -30,7 +35,7 @@ const BoardDetail = ({ selectedBoard, onHomeClick }) => {
                 <h1>{selectedBoard.name}</h1>
                 <p>{selectedBoard.comment}</p>
                 <TaskList tasks={selectedBoard.tasks} />
-                <TaskForm />
+                <TaskForm onNewTaskSubmit={handleNewTask}/>
                 <button className="home-button" onClick={handleClick}>Back To Boards..</button>
             </div>
         </>
