@@ -114,7 +114,7 @@ body {
     min-height: 5.0vw;
   
     background-color: #FDFDFF; 
-    border: 0.1vw solid #B2B2B2;
+    border: 0.1vw solid #FF885C;
     /* box-shadow: 0.0vw 0.0vw 0.1vw #92A0AD; */
   
     /* color: #FFFFFF; */
@@ -146,14 +146,14 @@ body {
 a {
     text-decoration: none;
     color: #FF4500;
-    text-shadow: 0.0vw 0.0vw 0.3vw #FF6A33;
+    text-shadow: 0.0vw 0.0vw 0.5vw #FFA07D;
     font-weight: bold;
     cursor: pointer;
   }
 
 .dummy-links {
     color: #FF4500;
-    text-shadow: 0.0vw 0.0vw 0.3vw #FF885C;
+    text-shadow: 0.0vw 0.0vw 0.5vw #FFA07D;
     font-weight: bold;
     cursor: pointer;
 }

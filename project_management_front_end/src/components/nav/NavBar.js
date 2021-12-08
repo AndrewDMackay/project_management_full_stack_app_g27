@@ -11,7 +11,7 @@ const NavBar = () => {
                 <div className="main-nav-bar">
                     <ul>
                         <li className="logo-main-nav-bar">
-                        ABRICOT
+                        <a className="dummy-links">ABRICOT</a>
                         {/* <img src={require(img)} alt="abricot logo"></img> */}
                         </li>
                         <li>
