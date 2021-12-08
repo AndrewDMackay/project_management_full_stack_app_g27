@@ -14,7 +14,7 @@ const MainContainer = () => {
             <div className="main-container">
                 <h1>ABRICǒT.</h1>
                 <h1 className="main-container-logo">Ò</h1>
-                <h4>[ PRǒJECT MANAGEMENT. ]</h4>
+                <h4>[ PRǒJECT MANAGEMENť. ]</h4>
             </div>
         </>
     )

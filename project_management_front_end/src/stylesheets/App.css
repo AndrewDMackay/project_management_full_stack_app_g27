@@ -90,9 +90,9 @@ body {
   }
 
 
-/*  Task Container, flex, etc.. */
+/*  Board Detail Container, flex, etc.. */
 
-.task-container {
+.board-detail-container {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
