@@ -12,8 +12,8 @@ const MainContainer = () => {
                 <NavBar />
             </div>
             <div className="main-container">
-                <h1>Main Container</h1>
-                <p>I am the Main Container..</p>
+                <h1>ABRICÓT</h1>
+                <h3>PROJECT MANAGEMENT</h3>
             </div>
         </>
     )

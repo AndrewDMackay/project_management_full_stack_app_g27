@@ -10,9 +10,11 @@ const NavBar = () => {
             <header>
                 <div className="main-nav-bar">
                     <ul>
-                        <li className="logo-main-nav-bar">
-                        <a className="dummy-links">ABRICOT</a>
-                        {/* <img src={require(img)} alt="abricot logo"></img> */}
+                        <li>
+                        <a className="logo-main-nav-bar">Ò</a>
+                        </li>
+                        <li>
+                        <a className="dummy-links">ABRICÓT</a>
                         </li>
                         <li>
                             <Link to="/">HOME</Link>
