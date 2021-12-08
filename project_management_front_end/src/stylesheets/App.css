@@ -227,3 +227,11 @@ a {
     font-weight: bolder;
     cursor: pointer;
 }
+
+.logo-main-nav-bar-text {
+    color: #CC3700;
+    text-shadow: 0.0vw 0.0vw 0.5vw #FF885C;
+    font-size: 1.75vw;
+    font-weight: bolder;
+    cursor: pointer;
+}

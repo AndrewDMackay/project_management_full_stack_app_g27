@@ -14,25 +14,25 @@ const NavBar = () => {
                         <a className="logo-main-nav-bar">Ò.</a>
                         </li>
                         <li>
-                        <a className="dummy-links">ABRICǒT</a>
+                        <a className="logo-main-nav-bar-text">ABRICǒT.</a>
                         </li>
                         <li>
-                            <Link to="/">HOME</Link>
+                            <Link to="/">HOME. ></Link>
                         </li>
                         <li>
-                            <Link to="/boards">BOARDS</Link>
+                            <Link to="/boards">BOARDS. ></Link>
                         </li>
                         <li>
-                        <a className="dummy-links">NEW BOARDS</a>
+                        <a className="dummy-links">RECENT BOARDS. ></a>
                         </li>
                         <li>
-                        <a className="dummy-links">ALL TASKS</a>
+                        <a className="dummy-links">ALL TASKS. ></a>
                         </li>
                         <li>
-                            <a className="dummy-links">SEARCH</a>
+                            <a className="dummy-links">SEARCH. ></a>
                         </li>
                         <li>
-                            <a className="dummy-links">FILTER</a>
+                            <a className="dummy-links">FILTER. ></a>
                         </li>
                     </ul>
                 </div>
