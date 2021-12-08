@@ -21,10 +21,10 @@ const NavBar = () => {
                             <Link to="/boards">BOARDS</Link>
                         </li>
                         <li>
-                            NEW BOARDS
+                        <a className="dummy-links">NEW BOARDS</a>
                         </li>
                         <li>
-                            FILTER
+                            <a className="dummy-links">FILTER</a>
                         </li>
                     </ul>
                 </div>

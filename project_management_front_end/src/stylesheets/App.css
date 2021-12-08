@@ -1,9 +1,23 @@
 /* Font-family commands below, for imported Google Fonts.. */
 
-/* font-family: 'Amatic SC', cursive;
+/* 
+font-family: 'Amatic SC', cursive;
 font-family: 'Oswald', sans-serif;
 font-family: 'Roboto', sans-serif;
-font-family: 'Roboto Condensed', sans-serif; */
+font-family: 'Roboto Condensed', sans-serif; 
+*/
+
+/* Color bank.. */
+
+/* 
+Burnt orange to melon..
+color: #FF4500;
+color: #FF6A33;
+color: #FF885C; 
+color: #FFA07D
+color: #FFB397 
+color: #FFC2AC 
+*/
 
 
 /* Main body.. */
@@ -127,3 +141,19 @@ body {
   }
   
   
+  /* Links, a, and React Router Links.. */
+
+a {
+    text-decoration: none;
+    color: #FF4500;
+    text-shadow: 0.0vw 0.0vw 0.3vw #FF6A33;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+.dummy-links {
+    color: #FF4500;
+    text-shadow: 0.0vw 0.0vw 0.3vw #FF885C;
+    font-weight: bold;
+    cursor: pointer;
+}
