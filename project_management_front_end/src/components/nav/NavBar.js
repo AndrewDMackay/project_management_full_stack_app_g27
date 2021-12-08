@@ -11,10 +11,10 @@ const NavBar = () => {
                 <div className="main-nav-bar">
                     <ul>
                         <li>
-                        <a className="logo-main-nav-bar">Ò</a>
+                        <a className="logo-main-nav-bar">Ò.</a>
                         </li>
                         <li>
-                        <a className="dummy-links">ABRICÓT</a>
+                        <a className="dummy-links">ABRICǒT</a>
                         </li>
                         <li>
                             <Link to="/">HOME</Link>
@@ -24,6 +24,12 @@ const NavBar = () => {
                         </li>
                         <li>
                         <a className="dummy-links">NEW BOARDS</a>
+                        </li>
+                        <li>
+                        <a className="dummy-links">ALL TASKS</a>
+                        </li>
+                        <li>
+                            <a className="dummy-links">SEARCH</a>
                         </li>
                         <li>
                             <a className="dummy-links">FILTER</a>

@@ -152,10 +152,17 @@ body {
 
   /* Headings.. */
 
+  .main-container-logo {
+    font-weight: bolder;
+    font-size: 8.0vw;
+    color: #CC3700;
+    text-shadow: 0.75vw 0.75vw 0.5vw #FF885C;
+  }
+
   h1 {
     font-weight: bolder;
     font-size: 4.0vw;
-    color: #FF4500;
+    color: #CC3700;
     text-shadow: 0.0vw 0.0vw 0.5vw #FFA07D;
   
     margin: 0.5vw;
@@ -165,8 +172,8 @@ body {
   h2 {
     font-weight: bold;
     font-size: 3.0vw;
-    color: #FF6A33;
-    text-shadow: 0.0vw 0.0vw 0.5vw #FFB397;
+    color: #FF4500;
+    text-shadow: 0.0vw 0.0vw 0.5vw #FFA07D;
   
     margin: 0.5vw;
     padding: 0.5vw;
@@ -186,8 +193,8 @@ body {
   h4 {
     font-weight: bold;
     font-size: 2.0vw;
-    color: #FF6A33;
-    text-shadow: 0.0vw 0.0vw 0.5vw #FFB397;
+    color: #FF4500;
+    text-shadow: 0.0vw 0.0vw 0.5vw #FFA07D;
   
     margin: 0.5vw;
     padding: 0.5vw;
@@ -215,8 +222,8 @@ a {
 
 .logo-main-nav-bar {
     color: #CC3700;
-    text-shadow: 0.0vw 0.0vw 0.5vw #FF4500;
-    font-size: 2.0vw;
+    text-shadow: 0.5vw 0.5vw 0.5vw #FF885C;
+    font-size: 2.25vw;
     font-weight: bolder;
     cursor: pointer;
 }
