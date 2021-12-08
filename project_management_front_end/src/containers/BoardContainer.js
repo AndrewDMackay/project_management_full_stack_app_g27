@@ -38,10 +38,6 @@ const BoardContainer = () => {
         setSelectedBoard(null);
     }
 
-    const onNewBoardSubmit = (board) => {
-
-    }
-
     //  Board functions.. 
 
     const findBoardById = function (id) {
@@ -84,7 +80,7 @@ const BoardContainer = () => {
             <div className="board-container">
                 <div>
                     <h1>Board Container</h1>
-                    {!selectedBoard ? <BoardForm selectedBoard={selectedBoard} onNewBoardSubmit={onNewBoardubmit} /> : null}
+                    {!selectedBoard ? <BoardForm selectedBoard={selectedBoard} onNewBoardSubmit={handlePostBoard}/> : null}
                     {!selectedBoard ? <BoardList boards={boards} onBoardClick={onBoardClick} /> : null}
                     {selectedBoard ? <BoardDetail selectedBoard={selectedBoard} onHomeClick={onHomeClick} /> : null}
                 </div>
