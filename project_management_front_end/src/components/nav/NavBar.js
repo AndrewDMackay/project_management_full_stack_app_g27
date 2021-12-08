@@ -10,11 +10,21 @@ const NavBar = () => {
             <header>
                 <div className="main-nav-bar">
                     <ul>
-                        <li>
-                            <Link to="/">Home</Link>
+                        <li className="logo-main-nav-bar">
+                        ABRICOT
+                        {/* <img src={require(img)} alt="abricot logo"></img> */}
                         </li>
                         <li>
-                            <Link to="/boards">Boards</Link>
+                            <Link to="/">HOME</Link>
+                        </li>
+                        <li>
+                            <Link to="/boards">BOARDS</Link>
+                        </li>
+                        <li>
+                            NEW BOARDS
+                        </li>
+                        <li>
+                            FILTER
                         </li>
                     </ul>
                 </div>
