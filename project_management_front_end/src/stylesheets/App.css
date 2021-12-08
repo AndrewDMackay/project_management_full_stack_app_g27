@@ -122,7 +122,9 @@ body {
     margin-left: 10.0vw;
     margin-right: 10.0vw;
     margin-top: 2.0vw;
-    padding: 5.0vw;
+    padding: 4.0vw;
+    padding-left: 8.0vw;
+    padding-right: 8.0vw;
   
     border: 0.2vw solid #CC3700;
     background-color: #FDFDFF; 

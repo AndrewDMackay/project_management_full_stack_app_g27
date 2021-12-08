@@ -29,7 +29,7 @@ const BoardList = ({ boards, onBoardClick }) => {
     return (
         <>
             <div className="board-list-container">
-                <h1>Board List</h1>
+                <h1>[ Bǒard List ]</h1>
                 <div>
                     <ul className="board-unordered-list">
                         {boardNodes}
