@@ -19,12 +19,24 @@ const TaskForm = ({ task, onNewTaskSubmit }) => {
 
     // Task form functions.. 
 
-    const handleNameChange = (event) => {
-        setName(event.target.value)
+    const handleDateChange = (event) => {
+        setDate(event.target.value)
+    }
+
+    const handleTimeChange = (event) => {
+        setTime(event.target.value)
     }
 
     const handleCommentChange = (event) => {
         setComment(event.target.value)
+    }
+
+    const handlePriorityChange = (event) => {
+        setPriority(event.target.value)
+    }
+
+    const handleCompletedChange = (event) => {
+        setCompleted(event.target.value)
     }
 
     const handleSubmit = (event) => {
