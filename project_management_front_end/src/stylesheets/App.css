@@ -301,4 +301,28 @@ input, select, textarea{
     color: #FF6A33;
     opacity: 1;
   }
+
+
+/* Buttons, custom buttons, and submit inputs.. */
+
+.custom-button, input[type=submit] {
+    white-space: nowrap;
+    overflow:'hidden';
+    text-decoration: none;
+    display: inline-block;
   
+    font-size: 1.0vw;
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+   
+    padding: 0.75vw;
+    margin: 0.5vw;
+  
+    border: 0.1vw solid #F8F8FF;
+    box-shadow: 0.0vw 0.0vw 0.5vw #92A0AD;
+    background-color: #090909;
+  
+    outline: none;
+    cursor: pointer;
+  }
