@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
 
 
-const BoardForm = ({ board }) => {
+const BoardForm = ({ board, onNewBoardSubmit }) => {
 
-    const [input, setInput] = useState("")
+    const [name, setName] = useState("")
+    const [comment, setComment] = useState("")
 
     // Loading message..
 
@@ -16,11 +17,11 @@ const BoardForm = ({ board }) => {
     // Board form functions.. 
 
     const handleNameChange = (event) => {
-        setInput(event.target.value)
+        setName(event.target.value)
     }
 
     const handleCommentChange = (event) => {
-        setInput(event.target.value)
+        setComment(event.target.value)
     }
 
 
@@ -29,7 +30,6 @@ const BoardForm = ({ board }) => {
         const newBoard = {
             name: name,
             comment: comment
-
         }
 
 

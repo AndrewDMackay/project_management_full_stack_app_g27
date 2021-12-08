@@ -38,6 +38,10 @@ const BoardContainer = () => {
         setSelectedBoard(null);
     }
 
+    const onNewBoardSubmit = (board) => {
+
+    }
+
     //  Board functions.. 
 
     const findBoardById = function (id) {
@@ -68,36 +72,6 @@ const BoardContainer = () => {
     }
 
 
-    //  Task functions.. 
-
-    // const findTaskById = function (id) {
-    //     return tasks.find((task) => {
-    //         return task.id === parseInt(id);
-    //     })
-    // }
-
-    // const handleDeleteTask = function (id) {
-    //     const request = new Request();
-    //     const url = "/api/tasks/" + id
-    //     request.delete(url)
-    //         .then(() => window.location = "/boards")
-    // }
-
-    // const handlePostTask = function (task) {
-    //     const request = new Request();
-    //     request.post("/api/tasks", task)
-    //         .then(() => window.location = '/boards')
-    // }
-
-    // const handleUpdateTask = function (task) {
-    //     const request = new Request();
-    //     request.patch('/api/tasks/' + task.id, task)
-    //         .then(() => {
-    //             window.location = '/boards/' + task.id
-    //         })
-    // }
-
-
     if (!boards) {
         return null;
     }
@@ -110,7 +84,7 @@ const BoardContainer = () => {
             <div className="board-container">
                 <div>
                     <h1>Board Container</h1>
-                    {selectedBoard ? <BoardForm selectedBoard={selectedBoard} onNewBoardSubmit={onNewBoardubmit} /> : null}
+                    {!selectedBoard ? <BoardForm selectedBoard={selectedBoard} onNewBoardSubmit={onNewBoardubmit} /> : null}
                     {!selectedBoard ? <BoardList boards={boards} onBoardClick={onBoardClick} /> : null}
                     {selectedBoard ? <BoardDetail selectedBoard={selectedBoard} onHomeClick={onHomeClick} /> : null}
                 </div>
@@ -145,4 +119,34 @@ const BoardContainer = () => {
 
 
 export default BoardContainer;
+
+
+    //  Task functions.. 
+
+    // const findTaskById = function (id) {
+    //     return tasks.find((task) => {
+    //         return task.id === parseInt(id);
+    //     })
+    // }
+
+    // const handleDeleteTask = function (id) {
+    //     const request = new Request();
+    //     const url = "/api/tasks/" + id
+    //     request.delete(url)
+    //         .then(() => window.location = "/boards")
+    // }
+
+    // const handlePostTask = function (task) {
+    //     const request = new Request();
+    //     request.post("/api/tasks", task)
+    //         .then(() => window.location = '/boards')
+    // }
+
+    // const handleUpdateTask = function (task) {
+    //     const request = new Request();
+    //     request.patch('/api/tasks/' + task.id, task)
+    //         .then(() => {
+    //             window.location = '/boards/' + task.id
+    //         })
+    // }
 
