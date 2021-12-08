@@ -87,7 +87,8 @@ const BoardContainer = () => {
                 <NavBar />
             </div>
             <div className="board-container">
-                <h1>MY BOARDS.</h1>
+                <h1 className="main-container-logo-small">Ò </h1>
+                <h1>[ MY BǒARDS. ]</h1>
                 {!selectedBoard ? <BoardForm selectedBoard={selectedBoard} onNewBoardSubmit={handlePostBoard} /> : null}
                 {!selectedBoard ? <BoardList boards={boards} onBoardClick={onBoardClick} /> : null}
                 {selectedBoard ? <BoardDetail selectedBoard={selectedBoard} onHomeClick={onHomeClick} onNewTaskSubmit={handlePostTask} /> : null}

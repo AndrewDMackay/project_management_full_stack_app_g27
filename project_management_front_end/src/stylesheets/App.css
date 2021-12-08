@@ -32,7 +32,7 @@ color: #FDFDFF;
 body {
     font-family: 'Amatic SC', cursive;
     font-size: 1.0vw;
-    color: #0E0400;
+    color: #FF4500;
     /* text-shadow: 0.0vw 0.0vw 0.5vw #8D8D8D; */
     margin: 0;
   
@@ -69,7 +69,7 @@ body {
   }
 
 
-/*  Board Container, flex, etc.. */
+/*  Board component containers, flex, etc.. */
 
 .board-container {
     display: flex;
@@ -90,10 +90,7 @@ body {
     box-shadow: 0.0vw 0.0vw 0.5vw #FF885C;
   }
 
-
-/*  Board Detail Container, flex, etc.. */
-
-.board-detail-container {
+  .board-list-container {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -101,12 +98,29 @@ body {
     align-items: center;
     align-content: center;
     justify-content: center;
-
-    min-height: 38.95vw;
   
-    margin-left: 15.0vw;
-    margin-right: 15.0vw;
-    margin-top: 0.0vw;
+    margin-left: 10.0vw;
+    margin-right: 10.0vw;
+    margin-top: 5.0vw;
+    padding: 5.0vw;
+  
+    border: 0.2vw solid #CC3700;
+    background-color: #FDFDFF; 
+    box-shadow: 0.0vw 0.0vw 0.5vw #FF885C;
+  }
+
+  .board-form-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+  
+    margin-left: 10.0vw;
+    margin-right: 10.0vw;
+    margin-top: 2.0vw;
     padding: 5.0vw;
   
     border: 0.2vw solid #CC3700;
@@ -170,6 +184,13 @@ body {
   
     margin: 0.5vw;
     padding: 0.5vw;
+  }
+
+  .main-container-logo-small {
+    font-weight: bolder;
+    font-size: 6.0vw;
+    color: #CC3700;
+    text-shadow: 0.75vw 0.75vw 0.5vw #FF885C;
   }
 
   h1 {
@@ -248,7 +269,12 @@ a {
 
 .form-inputs, select {
     font-size: 1.0vw;
-    color: #FFA07D;
+    font-family: 'Amatic SC', cursive;
+    color: #FF4500;
+    background-color: #FFC2AC;
+
+    border: 0.2vw solid #CC3700;
+    box-shadow: 0.0vw 0.0vw 0.5vw #FF885C;
     text-transform: uppercase;
   
     padding: 0.5vw;
@@ -257,21 +283,22 @@ a {
     box-sizing: border-box;
     outline: none;
   }
+
   
-  
-  .user-form-inputs {
-    font-size: 1.0vw;
-    color: #FFA07D;
-  
-    padding: 0.5vw;
-    margin: 0.5vw;
-  
-    box-sizing: border-box;
-    outline: none;
-  }
-  
-  .form-inputs:focus{
+.form-inputs:focus{
     outline: none;     
   }
 
+textarea:focus, input:focus {
+    color: #FF4500;
+}
+
+input, select, textarea{
+    color: #FF4500;
+}
+
+::placeholder {
+    color: #FF6A33;
+    opacity: 1;
+  }
   

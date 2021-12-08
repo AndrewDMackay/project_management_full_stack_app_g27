@@ -20,7 +20,7 @@ const NavBar = () => {
                             <Link to="/">HOME. ></Link>
                         </li>
                         <li>
-                            <Link to="/boards">BOARDS. ></Link>
+                            <Link to="/boards">BǒARDS. ></Link>
                         </li>
                         <li>
                         <a className="dummy-links">RECENT BOARDS. ></a>
