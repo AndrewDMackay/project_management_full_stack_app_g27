@@ -351,6 +351,15 @@ body {
     padding: 0.5vw;
   }
 
+  p {
+    font-weight: bold;
+    font-size: 1.0vw;
+    /* color: #FF4500;
+    text-shadow: 0.0vw 0.0vw 0.5vw #FFA07D; */
+    color: #FF6A33;
+    text-shadow: 0.0vw 0.0vw 0.5vw #FFB397;
+  }
+
 
   
   /* Links, a, and React Router Links.. */

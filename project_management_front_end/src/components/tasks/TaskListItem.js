@@ -16,12 +16,13 @@ const TaskListItem = ({ task }) => {
     return (
         <>
             <div className="task-list-item-container">
-                <h1>Task List Item</h1>
-                <p>Date {task.date}</p>
-                <p>Time {task.time}</p>
-                <p>Comment {task.comment}</p>
+                <h4>Task List Item</h4>
+                <p>{task.date}</p>
+                <p>{task.time}</p>
+                <p>{task.comment}</p>
                 <p>Priority {task.priority}</p>
                 <form>
+                <p>Completed..</p>
                     <input className="form-inputs" type="checkbox" id="completed" value="completed" required />
                 </form>
                 {/* <p>Completed {task.completed}</p> */}
