@@ -60,17 +60,14 @@ const TaskForm = ({ task, onNewTaskSubmit }) => {
                     <input className="form-inputs" type="date" id="date" placeholder="Enter Date.." value={date} onChange={handleDateChange} required />
                     <input className="form-inputs" type="time" id="time" placeholder="Enter Time.." value={time} onChange={handleTimeChange} required />
                     <input className="form-inputs" type="text" id="comment" placeholder="Enter Comment.." value={comment} onChange={handleCommentChange} required />
-                    <br />
-                    <input className="form-inputs" type="checkbox" id="completed" value="true" onChange={handleCompletedChange} />
-                    <label className="form-inputs" for="completed">Completed..</label>
-                    <br />
-                    <input className="form-inputs" type="radio" id="priority-low" name="priority" value="LOW" onChange={handlePriorityChange} required />
+                    {/* <input className="form-inputs" type="checkbox" id="completed" value="true" onChange={handleCompletedChange} /> */}
+                    {/* <label className="form-inputs" for="completed">Completed..</label> */}
+                    {/* <input className="form-inputs" type="radio" id="priority-low" name="priority" value="LOW" onChange={handlePriorityChange} required /> */}
                     <label className="form-inputs" for="priority-low">Low..</label>
-                    <input className="form-inputs" type="radio" id="priority-medium" name="priority" value="MEDIUM" onChange={handlePriorityChange} required />
+                    {/* <input className="form-inputs" type="radio" id="priority-medium" name="priority" value="MEDIUM" onChange={handlePriorityChange} required /> */}
                     <label className="form-inputs" for="priority-medium">Medium..</label>
-                    <input className="form-inputs" type="radio" id="priority-high" name="priority" value="HIGH" onChange={handlePriorityChange} required />
+                    {/* <input className="form-inputs" type="radio" id="priority-high" name="priority" value="HIGH" onChange={handlePriorityChange} required /> */}
                     <label className="form-inputs" for="priority-high">High..</label>
-                    <br />
                     <input className="form-inputs" type="submit" value="submit" />
                 </form>
             </div>
