@@ -32,7 +32,7 @@ const BoardDetail = ({ selectedBoard, onHomeClick, onNewTaskSubmit }) => {
     return (
         <>
             <div className="board-container">
-                <h1 className="main-container-logo-tiny">Ò </h1>
+                <h1 className="main-container-logo-tiny">Ò</h1>
                 <h2>{selectedBoard.name}</h2>
                 <h5>{selectedBoard.comment}</h5>
                 <TaskList tasks={selectedBoard.tasks} />
