@@ -163,14 +163,14 @@ body {
     align-content: center;
     justify-content: center;
   
-    margin-left: 10.0vw;
-    margin-right: 10.0vw;
-    margin-top: 5.0vw;
-    padding: 5.0vw;
+    /* margin-left: 5.0vw;
+    margin-right: 5.0vw;
+    margin-top: 2.0vw;
+    padding: 5.0vw; */
   
-    border: 0.2vw solid #CC3700;
+    /* border: 0.2vw solid #CC3700;
     background-color: #FDFDFF; 
-    box-shadow: 0.0vw 0.0vw 0.5vw #FF885C;
+    box-shadow: 0.0vw 0.0vw 0.5vw #FF885C; */
   }
 
   .task-form-container {
@@ -287,6 +287,13 @@ body {
   .main-container-logo-small {
     font-weight: bolder;
     font-size: 6.0vw;
+    color: #CC3700;
+    text-shadow: 0.75vw 0.75vw 0.5vw #FF885C;
+  }
+
+  .main-container-logo-tiny {
+    font-weight: bolder;
+    font-size: 2.0vw;
     color: #CC3700;
     text-shadow: 0.75vw 0.75vw 0.5vw #FF885C;
   }

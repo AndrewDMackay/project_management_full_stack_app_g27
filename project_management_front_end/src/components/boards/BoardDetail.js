@@ -22,7 +22,7 @@ const BoardDetail = ({ selectedBoard, onHomeClick, onNewTaskSubmit }) => {
         onHomeClick();
     }
 
-    const handleNewTask = function(task){
+    const handleNewTask = function (task) {
         task.board = selectedBoard
         onNewTaskSubmit(task)
     }
@@ -32,10 +32,11 @@ const BoardDetail = ({ selectedBoard, onHomeClick, onNewTaskSubmit }) => {
     return (
         <>
             <div className="board-container">
-                <h1>{selectedBoard.name}</h1>
-                <p>{selectedBoard.comment}</p>
+                <h1 className="main-container-logo-tiny">Ò </h1>
+                <h2>{selectedBoard.name}</h2>
+                <h5>{selectedBoard.comment}</h5>
                 <TaskList tasks={selectedBoard.tasks} />
-                <TaskForm onNewTaskSubmit={handleNewTask}/>
+                <TaskForm onNewTaskSubmit={handleNewTask} />
                 <button className="home-button" onClick={handleClick}>Back To Boards..</button>
             </div>
         </>

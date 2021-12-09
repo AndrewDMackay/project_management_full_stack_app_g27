@@ -30,7 +30,6 @@ const TaskList = ({ tasks }) => {
     return (
         <>
             <div className="task-list-container">
-                <h1>Task List</h1>
                 <div>
                     <ul className="task-unordered-list">
                         {taskNodes}
