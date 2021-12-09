@@ -26,9 +26,10 @@ const BoardListItem = ({ board, onBoardClick }) => {
         <>
             <div className="board-list-item-container">
                 <div onClick={handleClick}>
-                    <h1>Name {board.name}</h1>
-                    <p>Comment {board.comment}</p>
+                    <h4>{board.name}</h4>
+                    <h5>{board.comment}</h5>
                 </div>
+                <button className="delete-button">X</button>
                 {/* <Link to={urlBoardById} className="test">
                     <h1>Name {board.name}</h1>
                     <p>Comment {board.comment}</p>
